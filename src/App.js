@@ -6,6 +6,7 @@ import BarChart from './components/barChart.js';
 import { Table, Column, HeaderCell, Cell } from 'rsuite-table';
 import * as emailData from './users.json';
 import 'rsuite-table/dist/css/rsuite-table.css';
+import { TextField } from '@mui/material';
 
 function App() {
   const [userData] = useState({
@@ -20,12 +21,17 @@ function App() {
   return (
     <div className="App">
       <nav>
-        <Link to="/table">Table</Link>
-        <Link to="/charts">Charts</Link>
+        <Link to="/table" className="link">
+          Table
+        </Link>
+        <Link to="/charts" className="link">
+          Charts
+        </Link>
       </nav>
       <Switch>
         <Route path="/table">
           <h1>Table Libary</h1>
+          <TextField className="blah" label="This is the CSS Library Component" />
           <Table data={emailData} autoHeight>
             <Column width={150}>
               <HeaderCell>First Name</HeaderCell>

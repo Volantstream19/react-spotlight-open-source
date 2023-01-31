@@ -5,3 +5,9 @@ nav {
 a {
   margin: 5px;
 }
+
+.blah {
+  display: flex;
+  padding: 5px;
+  scale: 90%;
+}
